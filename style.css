@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /*Aligns items center vertically  */
+
+  padding: 16px 32px;
+
+  background-color: white;
+
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.search-input {
+  width: 300px;
+
+  padding: 10px;
+
+  border-radius: 8px;
+  border: 1px solid #ccc;
+
+  outline: none;
+}
+
+.theme-toggle {
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  background-color: black;
+  color: white;
+
+  font-size: 16px;
+}
