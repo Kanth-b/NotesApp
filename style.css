@@ -52,3 +52,10 @@ body {
 
   font-size: 16px;
 }
+
+.notes-input-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
