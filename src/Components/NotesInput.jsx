@@ -2,16 +2,13 @@ import React from "react";
 import { useState } from "react";
 
 function NotesInput({ notes, setNotes }) {
-  const [input, setInput] = useState(null);
+  const [input, setInput] = useState("");
 
   function handleAddNotes() {
     if (input.trim() === "") {
       return;
     }
-    setNotes({
-      ...notes,
-      input,
-    });
+    setNotes([...notes, input]);
 
     setInput("");
   }
