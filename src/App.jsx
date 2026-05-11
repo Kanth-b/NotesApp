@@ -7,6 +7,7 @@ import NotesList from "./Components/NotesList";
 function App() {
   const [notes, setNotes] = useState([]);
   const [searchtext, setsearchText] = useState("");
+  const [darkmode, setDarkmode] = useState(false);
 
   function handleDelete(indextoDelete) {
     const updatedNotes = notes.filter((_, index) => index !== indextoDelete);
@@ -15,11 +16,20 @@ function App() {
   }
 
   return (
-    <>
-      <Navbar searchtext={searchtext} setsearchText={setsearchText} />
+    <div className={darkmode ? "app dark" : "app"}>
+      <Navbar
+        searchtext={searchtext}
+        setsearchText={setsearchText}
+        darkmode={darkmode}
+        setDarkmode={setDarkmode}
+      />
       <NotesInput notes={notes} setNotes={setNotes} />
-      <NotesList notes={notes} handleDelete={handleDelete} searchtext={searchtext}/>
-    </>
+      <NotesList
+        notes={notes}
+        handleDelete={handleDelete}
+        searchtext={searchtext}
+      />
+    </div>
   );
 }
 

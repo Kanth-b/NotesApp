@@ -4,7 +4,7 @@ const NotesList = ({ notes, handleDelete, searchtext }) => {
   const filteredNotes = notes.filter((note) =>
     note.toLowerCase().includes(searchtext.toLowerCase()),
   );
-  console.log(filteredNotes);
+//   console.log(filteredNotes);
   return (
     <div className="notes-list">
       <h2>Your Notes</h2>

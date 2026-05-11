@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function Navbar({ searchtext, setsearchText }) {
+function Navbar({ searchtext, setsearchText, darkmode, setDarkmode }) {
   const [toggleTheme, settoggleTheme] = useState("dark");
   return (
     <nav className="navbar">
@@ -15,7 +15,14 @@ function Navbar({ searchtext, setsearchText }) {
         }}
         value={searchtext}
       />
-      <button className="theme-toggle"> 🌙</button>
+      <button
+        className="theme-toggle"
+        onClick={() => {
+          setDarkmode(!darkmode);
+        }}
+      >
+        {darkmode ? "☀️" : "🌙"}
+      </button>
     </nav>
   );
 }

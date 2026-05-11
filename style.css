@@ -91,3 +91,31 @@ body {
 
   cursor: pointer;
 }
+
+.app {
+  min-height: 100vh;
+
+  background-color: #f4f4f4;
+  color: black;
+
+  transition: all 0.3s ease;
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+.dark .navbar {
+  background-color: #1e1e1e;
+}
+
+.dark .note-card {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.dark h2 {
+  background-color: #1e1e1e;
+  color: white;
+}
